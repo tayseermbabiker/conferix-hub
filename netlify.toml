@@ -1,0 +1,14 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/usa/*"
+  to = "https://usaconferix.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/uae/*"
+  to = "https://silver-maamoul-f8cc76.netlify.app/:splat"
+  status = 200
+  force = true

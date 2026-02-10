@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA or UAE.">
+    <meta name="theme-color" content="#0B1426">
+    <title>Conferix | Professional Events, Conferences & Networking</title>
+
+    <meta name="author" content="Conferix">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://conferix.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://conferix.com/">
+    <meta property="og:title" content="Conferix | Professional Events, Conferences & Networking">
+    <meta property="og:site_name" content="Conferix">
+    <meta property="og:description" content="Curated professional events, conferences, and networking. Choose your region: USA or UAE.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conferix | Professional Events, Conferences & Networking">
+    <meta name="twitter:description" content="Curated professional events, conferences, and networking. Choose your region: USA or UAE.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en-us" href="https://conferix.com/usa/">
+    <link rel="alternate" hreflang="en-ae" href="https://conferix.com/uae/">
+    <link rel="alternate" hreflang="x-default" href="https://conferix.com/">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Conferix",
+        "description": "Curated professional events, conferences, and networking opportunities",
+        "url": "https://conferix.com/"
+    }
+    </script>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy-dark: #0B1426;
+            --navy: #1E3A5F;
+            --teal: #2DD4BF;
+            --gold: #D4A853;
+            --white: #FFFFFF;
+            --grey-light: #F1F5F9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy-dark);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 24px;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1426 0%, #1C2333 30%, #1E3A5F 60%, #1C2333 80%, #0B1426 100%);
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 56px;
+            font-weight: 400;
+        }
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 720px;
+            width: 100%;
+        }
+
+        .region-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 48px 32px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .region-card:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--teal);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(45, 212, 191, 0.15);
+        }
+
+        .region-flag {
+            font-size: 56px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .region-name {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .region-desc {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 600px) {
+            .logo { font-size: 36px; }
+            .tagline { font-size: 16px; margin-bottom: 40px; }
+            .region-grid { grid-template-columns: 1fr; gap: 20px; max-width: 340px; }
+            .region-card { padding: 36px 24px; }
+            .region-flag { font-size: 44px; }
+            .region-name { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="hero">
+        <h1 class="logo">Conferix</h1>
+        <p class="tagline">Professional Events, Curated</p>
+
+        <div class="region-grid">
+            <a href="/usa/" class="region-card">
+                <span class="region-flag">&#127482;&#127480;</span>
+                <h2 class="region-name">United States</h2>
+                <p class="region-desc">Austin, San Francisco, New York &amp; more</p>
+            </a>
+
+            <a href="/uae/" class="region-card">
+                <span class="region-flag">&#127462;&#127466;</span>
+                <h2 class="region-name">UAE</h2>
+                <p class="region-desc">Dubai, Abu Dhabi &amp; all emirates</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        &copy; 2026 Conferix. All rights reserved.
+    </footer>
+
+</body>
+</html>
