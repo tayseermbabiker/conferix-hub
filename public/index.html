@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA or UAE.">
+    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Discover events across the USA, UAE, and beyond.">
     <meta name="theme-color" content="#0B1426">
     <title>Conferix | Professional Events, Conferences & Networking</title>
 
@@ -16,12 +16,12 @@
     <meta property="og:url" content="https://conferix.com/">
     <meta property="og:title" content="Conferix | Professional Events, Conferences & Networking">
     <meta property="og:site_name" content="Conferix">
-    <meta property="og:description" content="Curated professional events, conferences, and networking. Choose your region: USA or UAE.">
+    <meta property="og:description" content="Curated professional events, conferences, and networking. Discover events across the USA, UAE, and beyond.">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Conferix | Professional Events, Conferences & Networking">
-    <meta name="twitter:description" content="Curated professional events, conferences, and networking. Choose your region: USA or UAE.">
+    <meta name="twitter:description" content="Curated professional events, conferences, and networking. Discover events across the USA, UAE, and beyond.">
 
     <!-- hreflang -->
     <link rel="alternate" hreflang="en-us" href="https://conferix.com/usa/">
@@ -34,10 +34,11 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebSite",
+        "@type": "Organization",
         "name": "Conferix",
-        "description": "Curated professional events, conferences, and networking opportunities",
-        "url": "https://conferix.com/"
+        "description": "Curated professional events, conferences, and networking opportunities across multiple regions",
+        "url": "https://conferix.com/",
+        "sameAs": []
     }
     </script>
 
@@ -51,62 +52,167 @@
 
         :root {
             --navy-dark: #0B1426;
+            --navy-mid: #111C2E;
             --navy: #1E3A5F;
             --teal: #2DD4BF;
             --gold: #D4A853;
             --white: #FFFFFF;
-            --grey-light: #F1F5F9;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--navy-dark);
             color: var(--white);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
 
-        .hero {
-            flex: 1;
+        /* ── Nav ── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 48px 24px;
-            text-align: center;
-            background: linear-gradient(135deg, #0B1426 0%, #1C2333 30%, #1E3A5F 60%, #1C2333 80%, #0B1426 100%);
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 64px;
+            background: rgba(11, 20, 38, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
-        .logo {
+        .nav-logo {
             font-family: 'DM Serif Display', Georgia, serif;
-            font-size: 48px;
+            font-size: 24px;
             font-weight: 400;
-            margin-bottom: 12px;
+            text-decoration: none;
             background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .tagline {
-            font-size: 18px;
-            color: rgba(255,255,255,0.7);
-            margin-bottom: 56px;
-            font-weight: 400;
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
         }
 
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--white); }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 140px 24px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #0B1426 0%, #1C2333 30%, #1E3A5F 60%, #1C2333 80%, #0B1426 100%);
+            min-height: 80vh;
+        }
+
+        .hero-logo {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 64px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: 22px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 16px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.55);
+            max-width: 540px;
+            line-height: 1.6;
+            margin-bottom: 48px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--teal);
+            color: var(--navy-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: #26b8a5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.3);
+        }
+
+        /* ── Section base ── */
+        .section { padding: 96px 24px; }
+        .section-dark { background: var(--navy-dark); }
+        .section-mid { background: var(--navy-mid); }
+
+        .section-header {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: rgba(255,255,255,0.55);
+            font-size: 16px;
+            max-width: 560px;
+            margin: 0 auto 56px;
+            line-height: 1.6;
+        }
+
+        /* ── Regions ── */
         .region-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
-            max-width: 720px;
-            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
         }
 
         .region-card {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.12);
+            position: relative;
             border-radius: 16px;
             padding: 48px 32px;
             text-align: center;
@@ -116,18 +222,31 @@
             cursor: pointer;
         }
 
-        .region-card:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--teal);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(45, 212, 191, 0.15);
+        .region-card-usa {
+            background: rgba(45, 212, 191, 0.06);
+            border: 1px solid rgba(45, 212, 191, 0.15);
         }
 
-        .region-flag {
-            font-size: 56px;
-            margin-bottom: 20px;
-            display: block;
+        .region-card-usa:hover {
+            background: rgba(45, 212, 191, 0.1);
+            border-color: rgba(45, 212, 191, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(45, 212, 191, 0.15);
         }
+
+        .region-card-uae {
+            background: rgba(212, 168, 83, 0.06);
+            border: 1px solid rgba(212, 168, 83, 0.15);
+        }
+
+        .region-card-uae:hover {
+            background: rgba(212, 168, 83, 0.1);
+            border-color: rgba(212, 168, 83, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(212, 168, 83, 0.15);
+        }
+
+        .region-flag { font-size: 56px; margin-bottom: 20px; display: block; }
 
         .region-name {
             font-family: 'DM Serif Display', Georgia, serif;
@@ -136,72 +255,391 @@
             margin-bottom: 8px;
         }
 
-        .region-desc {
+        .region-cities {
             font-size: 14px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.5);
             line-height: 1.5;
+            margin-bottom: 20px;
         }
 
-        .footer {
+        .region-link { font-size: 14px; font-weight: 600; letter-spacing: 0.3px; }
+        .region-card-usa .region-link { color: var(--teal); }
+        .region-card-uae .region-link { color: var(--gold); }
+
+        /* ── Industries ── */
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .industry-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 28px 20px;
             text-align: center;
-            padding: 24px;
-            font-size: 13px;
-            color: rgba(255,255,255,0.4);
+            transition: all 0.25s ease;
         }
 
-        .footer-impact {
+        .industry-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+
+        .industry-icon {
+            font-size: 28px;
             margin-bottom: 12px;
-            font-size: 16px;
-            color: rgba(255,255,255,0.55);
-            letter-spacing: 0.3px;
+            display: block;
+            color: var(--teal);
+            font-weight: 700;
+            font-family: 'DM Serif Display', Georgia, serif;
         }
 
-        .footer-impact a {
+        .industry-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .industry-desc {
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.4;
+        }
+
+        /* ── About ── */
+        .about-text {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.75);
+        }
+
+        /* ── Vision & Mission ── */
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .vm-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 40px 32px;
+        }
+
+        .vm-card-title {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            color: var(--teal);
+        }
+
+        .vm-card-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* ── Impact ── */
+        .impact-box {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 48px 40px;
+            background: rgba(212, 168, 83, 0.06);
+            border: 1px solid rgba(212, 168, 83, 0.15);
+            border-radius: 16px;
+        }
+
+        .impact-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .impact-title {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .impact-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 28px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .impact-link {
+            display: inline-block;
+            padding: 12px 28px;
+            border: 1px solid var(--gold);
             color: var(--gold);
             text-decoration: none;
             font-weight: 600;
+            font-size: 14px;
+            border-radius: 8px;
+            transition: all 0.2s;
         }
 
-        .footer-impact a:hover {
-            text-decoration: underline;
+        .impact-link:hover {
+            background: rgba(212, 168, 83, 0.1);
+            transform: translateY(-2px);
         }
 
+        /* ── Contact ── */
+        .contact-content { text-align: center; }
+
+        .contact-email { font-size: 20px; margin-top: 8px; }
+
+        .contact-email a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-email a:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            background: var(--navy-dark);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--white); }
+
+        .footer-links .sep { color: rgba(255,255,255,0.2); font-size: 13px; }
+
+        .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+
+        /* ── Mobile ── */
         @media (max-width: 600px) {
-            .logo { font-size: 36px; }
-            .tagline { font-size: 16px; margin-bottom: 40px; }
-            .region-grid { grid-template-columns: 1fr; gap: 20px; max-width: 340px; }
+            .nav { padding: 0 20px; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(11, 20, 38, 0.95);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 16px 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; }
+
+            .hero { padding: 120px 24px 60px; min-height: auto; }
+            .hero-logo { font-size: 44px; }
+            .hero-tagline { font-size: 18px; }
+            .hero-subtitle { font-size: 15px; }
+
+            .section { padding: 64px 20px; }
+            .section-header { font-size: 28px; }
+
+            .region-grid { grid-template-columns: 1fr; gap: 20px; max-width: 360px; }
             .region-card { padding: 36px 24px; }
             .region-flag { font-size: 44px; }
             .region-name { font-size: 24px; }
+
+            .industry-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+            .industry-card { padding: 22px 16px; }
+
+            .vm-grid { grid-template-columns: 1fr; gap: 20px; max-width: 400px; margin: 0 auto; }
+
+            .about-text { font-size: 15px; }
+            .impact-box { padding: 36px 24px; }
+            .impact-title { font-size: 24px; }
         }
     </style>
 </head>
 <body>
 
-    <main class="hero">
-        <h1 class="logo">Conferix</h1>
-        <p class="tagline">Professional Events, Curated</p>
+    <!-- Nav -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">Conferix</a>
+        <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="#regions">Regions</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <h1 class="hero-logo">Conferix</h1>
+        <p class="hero-tagline">Your Gateway to Premier Professional Events</p>
+        <p class="hero-subtitle">Discover curated conferences, networking mixers, and industry summits across the UAE, USA, and beyond.</p>
+        <a href="#regions" class="hero-cta">Explore Events</a>
+    </section>
+
+    <!-- Regions -->
+    <section class="section section-mid" id="regions">
+        <h2 class="section-header">Choose Your Region</h2>
+        <p class="section-sub">Curated events across our regional platforms.</p>
 
         <div class="region-grid">
-            <a href="/usa/" class="region-card">
+            <a href="/usa/" class="region-card region-card-usa">
                 <span class="region-flag">&#127482;&#127480;</span>
-                <h2 class="region-name">United States</h2>
-                <p class="region-desc">Austin, San Francisco, New York &amp; more</p>
+                <h3 class="region-name">United States</h3>
+                <p class="region-cities">Austin, San Francisco, New York</p>
+                <span class="region-link">Explore USA &#8594;</span>
             </a>
 
-            <a href="/uae/" class="region-card">
+            <a href="/uae/" class="region-card region-card-uae">
                 <span class="region-flag">&#127462;&#127466;</span>
-                <h2 class="region-name">UAE</h2>
-                <p class="region-desc">Dubai, Abu Dhabi &amp; all emirates</p>
+                <h3 class="region-name">UAE</h3>
+                <p class="region-cities">Dubai, Abu Dhabi &amp; all emirates</p>
+                <span class="region-link">Explore UAE &#8594;</span>
             </a>
         </div>
+    </section>
 
-    </main>
+    <!-- Industries -->
+    <section class="section section-dark" id="industries">
+        <h2 class="section-header">Industries We Cover</h2>
+        <p class="section-sub">Professional events across the sectors that drive global business.</p>
 
+        <div class="industry-grid">
+            <div class="industry-card">
+                <span class="industry-icon">T</span>
+                <p class="industry-name">Technology</p>
+                <p class="industry-desc">Software, cloud, DevOps</p>
+            </div>
+            <div class="industry-card">
+                <span class="industry-icon">F</span>
+                <p class="industry-name">Finance</p>
+                <p class="industry-desc">Banking, fintech, investing</p>
+            </div>
+            <div class="industry-card">
+                <span class="industry-icon">H</span>
+                <p class="industry-name">Healthcare</p>
+                <p class="industry-desc">Medical, pharma, biotech</p>
+            </div>
+            <div class="industry-card">
+                <span class="industry-icon">A</span>
+                <p class="industry-name">AI &amp; Startups</p>
+                <p class="industry-desc">Machine learning, ventures</p>
+            </div>
+            <div class="industry-card">
+                <span class="industry-icon">M</span>
+                <p class="industry-name">Marketing</p>
+                <p class="industry-desc">Digital, growth, branding</p>
+            </div>
+            <div class="industry-card">
+                <span class="industry-icon">L</span>
+                <p class="industry-name">Legal</p>
+                <p class="industry-desc">Law, compliance, policy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-mid" id="about">
+        <h2 class="section-header">About Conferix</h2>
+        <p class="about-text">
+            Conferix curates professional events, conferences, and networking opportunities across multiple regions. We help professionals discover the right events — whether it's a tech meetup in Austin, a finance summit in Dubai, or a community session for Sudanese professionals worldwide.
+        </p>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="section section-dark">
+        <h2 class="section-header" style="margin-bottom: 48px;">Vision &amp; Mission</h2>
+
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3 class="vm-card-title">Our Vision</h3>
+                <p class="vm-card-text">To be the go-to platform for professionals seeking meaningful events and connections — anywhere in the world.</p>
+            </div>
+            <div class="vm-card">
+                <h3 class="vm-card-title">Our Mission</h3>
+                <p class="vm-card-text">We curate, organize, and surface the best professional events so you never miss an opportunity to learn, connect, and grow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section section-mid" id="impact">
+        <div class="impact-box">
+            <p class="impact-label">Conferix Impact</p>
+            <h2 class="impact-title">Empowering Sudanese Professionals</h2>
+            <p class="impact-text">Supporting professional growth in emerging markets. Free online events connecting Sudanese professionals worldwide with opportunities to learn, network, and grow.</p>
+            <a href="/sudan/" class="impact-link">Visit Conferix Impact &#8594;</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+        <h2 class="section-header">Get in Touch</h2>
+        <div class="contact-content">
+            <p class="contact-email"><a href="mailto:hello@conferix.com">hello@conferix.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer-impact"><a href="/sudan/">Conferix Impact</a> — Empowering Sudanese Professionals</p>
-        <p>&copy; 2026 Conferix. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="/terms.html">Terms of Service</a>
+            <span class="sep">|</span>
+            <a href="/sudan/">Conferix Impact</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Conferix. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('open');
+            });
+        });
+    </script>
 
 </body>
 </html>
