@@ -12,3 +12,9 @@
   to = "https://silver-maamoul-f8cc76.netlify.app/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/sudan/*"
+  to = "https://sudanconferix.netlify.app/:splat"
+  status = 200
+  force = true

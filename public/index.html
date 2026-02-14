@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA or UAE.">
+    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA, UAE, or Sudan (Conferix Impact).">
     <meta name="theme-color" content="#0B1426">
     <title>Conferix | Professional Events, Conferences & Networking</title>
 
@@ -26,6 +26,8 @@
     <!-- hreflang -->
     <link rel="alternate" hreflang="en-us" href="https://conferix.com/usa/">
     <link rel="alternate" hreflang="en-ae" href="https://conferix.com/uae/">
+    <link rel="alternate" hreflang="en" href="https://conferix.com/sudan/">
+    <link rel="alternate" hreflang="ar" href="https://conferix.com/sudan/">
     <link rel="alternate" hreflang="x-default" href="https://conferix.com/">
 
     <!-- Schema.org JSON-LD -->
@@ -140,6 +142,38 @@
             line-height: 1.5;
         }
 
+        .impact-card {
+            margin-top: 32px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(212,168,83,0.3);
+            border-radius: 16px;
+            padding: 36px 32px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            max-width: 340px;
+            width: 100%;
+        }
+
+        .impact-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(212, 168, 83, 0.15);
+        }
+
+        .impact-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
         .footer {
             text-align: center;
             padding: 24px;
@@ -176,6 +210,13 @@
                 <p class="region-desc">Dubai, Abu Dhabi &amp; all emirates</p>
             </a>
         </div>
+
+        <a href="/sudan/" class="impact-card">
+            <span class="impact-label">Conferix Impact</span>
+            <span class="region-flag">&#127480;&#127465;</span>
+            <h2 class="region-name">Sudan</h2>
+            <p class="region-desc">Free online events for Sudanese professionals</p>
+        </a>
     </main>
 
     <footer class="footer">
