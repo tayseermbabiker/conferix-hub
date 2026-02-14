@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Conferix — our mission, vision, and story behind curating professional events worldwide.">
+    <meta name="theme-color" content="#0B1426">
+    <title>About | Conferix</title>
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://conferix.com/about.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --navy-dark: #0B1426;
+            --navy-mid: #111C2E;
+            --teal: #2DD4BF;
+            --gold: #D4A853;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy-dark);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 64px;
+            background: rgba(11, 20, 38, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .nav-logo {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 400;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-back {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover { color: var(--white); }
+
+        /* ── Content ── */
+        .content {
+            flex: 1;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+            width: 100%;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--teal);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 16px;
+        }
+
+        /* ── V&M cards ── */
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .vm-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 32px 24px;
+        }
+
+        .vm-card-title {
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: var(--teal);
+        }
+
+        .vm-card-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* ── Impact teaser ── */
+        .impact-box {
+            margin-top: 48px;
+            padding: 32px 28px;
+            background: rgba(212, 168, 83, 0.06);
+            border: 1px solid rgba(212, 168, 83, 0.15);
+            border-radius: 12px;
+        }
+
+        .impact-box h2 { color: var(--gold); margin-top: 0; }
+
+        .impact-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .impact-link:hover { text-decoration: underline; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.35);
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: var(--white); }
+
+        .footer .sep { color: rgba(255,255,255,0.2); }
+
+        /* ── Mobile ── */
+        @media (max-width: 600px) {
+            .nav { padding: 0 20px; }
+            .content { padding: 40px 20px 60px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 20px; }
+            .vm-grid { grid-template-columns: 1fr; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="/" class="nav-logo">Conferix</a>
+        <a href="/" class="nav-back">&#8592; Home</a>
+    </nav>
+
+    <div class="content">
+        <h1>About Conferix</h1>
+
+        <p>Conferix curates professional events, conferences, and networking opportunities across multiple regions. We help professionals discover the right events — whether it's a tech meetup in Austin, a finance summit in Dubai, or a community session for Sudanese professionals worldwide.</p>
+
+        <p>We believe that the right event at the right time can change a career. Our platform brings together regional event ecosystems with a unified, accessible experience — so you spend less time searching and more time connecting.</p>
+
+        <h2>Vision &amp; Mission</h2>
+
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3 class="vm-card-title">Our Vision</h3>
+                <p class="vm-card-text">To be the go-to platform for professionals seeking meaningful events and connections — anywhere in the world.</p>
+            </div>
+            <div class="vm-card">
+                <h3 class="vm-card-title">Our Mission</h3>
+                <p class="vm-card-text">We curate, organize, and surface the best professional events so you never miss an opportunity to learn, connect, and grow.</p>
+            </div>
+        </div>
+
+        <div class="impact-box">
+            <h2>Conferix Impact</h2>
+            <p>Our first social initiative — free online events empowering Sudanese professionals worldwide with opportunities to learn, network, and grow, no matter where they are.</p>
+            <a href="/sudan/" class="impact-link">Visit Conferix Impact &#8594;</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="/">Home</a> <span class="sep">|</span>
+        <a href="/privacy.html">Privacy</a> <span class="sep">|</span>
+        <a href="/terms.html">Terms</a> <span class="sep">|</span>
+        <a href="mailto:hello@conferix.com">Contact</a>
+    </footer>
+
+</body>
+</html>
