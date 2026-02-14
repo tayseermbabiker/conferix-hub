@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA, UAE, or Sudan (Conferix Impact).">
+    <meta name="description" content="Conferix curates professional events, conferences, and networking opportunities. Choose your region: USA or UAE.">
     <meta name="theme-color" content="#0B1426">
     <title>Conferix | Professional Events, Conferences & Networking</title>
 
@@ -142,43 +142,25 @@
             line-height: 1.5;
         }
 
-        .impact-card {
-            margin-top: 32px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(212,168,83,0.3);
-            border-radius: 16px;
-            padding: 36px 32px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--white);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            max-width: 340px;
-            width: 100%;
-        }
-
-        .impact-card:hover {
-            background: rgba(255,255,255,0.08);
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(212, 168, 83, 0.15);
-        }
-
-        .impact-label {
-            display: inline-block;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 16px;
-        }
-
         .footer {
             text-align: center;
             padding: 24px;
             font-size: 13px;
             color: rgba(255,255,255,0.4);
+        }
+
+        .footer-impact {
+            margin-bottom: 8px;
+        }
+
+        .footer-impact a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-impact a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
@@ -211,16 +193,11 @@
             </a>
         </div>
 
-        <a href="/sudan/" class="impact-card">
-            <span class="impact-label">Conferix Impact</span>
-            <span class="region-flag">&#127480;&#127465;</span>
-            <h2 class="region-name">Sudan</h2>
-            <p class="region-desc">Free online events for Sudanese professionals</p>
-        </a>
     </main>
 
     <footer class="footer">
-        &copy; 2026 Conferix. All rights reserved.
+        <p class="footer-impact"><a href="/sudan/">Conferix Impact</a> — Supporting emerging markets</p>
+        <p>&copy; 2026 Conferix. All rights reserved.</p>
     </footer>
 
 </body>
