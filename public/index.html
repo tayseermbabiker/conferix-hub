@@ -241,9 +241,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 180px 24px 130px;
+            padding: 160px 24px 60px;
             text-align: center;
-            min-height: 100vh;
         }
 
         .hero-eyebrow {
@@ -282,25 +281,21 @@
             filter: drop-shadow(0 4px 30px rgba(212, 168, 87, 0.25));
         }
 
-        .hero-italic {
-            font-family: 'DM Serif Display', Georgia, serif;
-            font-style: italic;
+        .hero-tagline {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 20px;
             font-weight: 400;
-            font-size: clamp(28px, 3.4vw, 44px);
-            line-height: 1.3;
-            color: var(--gold);
-            margin-bottom: 22px;
-            text-shadow: 0 0 24px rgba(212, 168, 87, 0.5);
+            color: var(--text-soft);
+            margin-bottom: 14px;
+            letter-spacing: 0.2px;
         }
 
-        .hero-italic em { font-style: italic; color: var(--gold-bright); }
-
         .hero-sub {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-mute);
-            max-width: 560px;
+            max-width: 520px;
             line-height: 1.6;
-            margin-bottom: 52px;
+            margin-bottom: 0;
         }
 
         .hero-cta-row {
@@ -368,7 +363,7 @@
         }
 
         /* ── Section base ── */
-        .section { padding: 110px 24px; position: relative; }
+        .section { padding: 60px 24px 110px; position: relative; }
 
         .section-eyebrow {
             display: flex;
@@ -1018,25 +1013,12 @@
             </p>
 
             <h1 class="hero-title">Conferix</h1>
-            <p class="hero-italic">Professional events, <em>curated.</em></p>
-            <p class="hero-sub">Connecting professionals with the events that matter &mdash; across the USA, UAE, and beyond.</p>
-
-            <div class="hero-cta-row">
-                <a href="/usa/" class="btn btn-teal">Explore USA <span>&#8594;</span></a>
-                <a href="/uae/" class="btn btn-gold">Explore UAE <span>&#8594;</span></a>
-            </div>
+            <p class="hero-tagline">Professional Events, Curated</p>
+            <p class="hero-sub">Connecting professionals with the events that matter, across the USA, UAE, and beyond.</p>
         </section>
 
         <!-- Regions -->
         <section class="section" id="regions">
-            <p class="section-eyebrow">
-                <span class="diamond">&#9670;</span>
-                A Curation
-                <span class="diamond">&#9670;</span>
-            </p>
-            <h2 class="section-title">Choose your <em>region</em></h2>
-            <p class="section-sub">Each region is independently curated &mdash; conferences, summits, and gatherings selected for professional relevance.</p>
-
             <div class="region-grid">
                 <a href="/usa/" class="region-card region-card-usa">
                     <div class="region-card-bg"></div>
